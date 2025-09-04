@@ -11,6 +11,28 @@ public static class ArraySelector
 
     private static int[] ListSelector(int[] list1, int[] list2, int[] select)
     {
-        return [];
+        int i = 0; // pointer for list1
+        int j = 0; // pointer for list2
+        int[] result = new int[select.Length];
+
+        for (int k = 0; k < select.Length; k++)
+        {
+            if (select[k] == 1)
+            {
+                result[k] = list1[i];
+                i++;
+            }
+            else if (select[k] == 2)
+            {
+                result[k] = list2[j];
+                j++;
+            }
+            else
+            {
+                throw new ArgumentException("Selector must contain only 1 or 2.");
+            }
+        }
+
+        return result; // ✅ FIXED
     }
 }
