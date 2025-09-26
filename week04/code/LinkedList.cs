@@ -33,7 +33,7 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void InsertTail(int value)
     {
-        // ✅ Problem 1: Insert a new node at the end
+        //  Problem 1: Insert a new node at the end
         Node newNode = new(value);
 
         // If the list is empty, new node is both head and tail
@@ -74,7 +74,7 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void RemoveTail()
     {
-        // ✅ Problem 2: Remove the last node
+        //  Problem 2: Remove the last node
         // If the list is empty or has one node
         if (_head == _tail)
         {
@@ -125,7 +125,7 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void Remove(int value)
     {
-        // ✅ Problem 3: Remove first occurrence of a node with given value
+        //  Problem 3: Remove first occurrence of a node with given value
         Node? curr = _head;
 
         while (curr is not null)
@@ -159,7 +159,7 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public void Replace(int oldValue, int newValue)
     {
-        // ✅ Problem 4: Replace all occurrences
+        // Problem 4: Replace all occurrences
         Node? curr = _head;
 
         while (curr is not null)
@@ -199,7 +199,7 @@ public class LinkedList : IEnumerable<int>
     /// </summary>
     public IEnumerable Reverse()
     {
-        // ✅ Problem 5: Iterate backwards starting from the tail
+        // Problem 5: Iterate backwards starting from the tail
         Node? curr = _tail; // Start at the end
         while (curr is not null)
         {
